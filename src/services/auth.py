@@ -12,6 +12,7 @@ from src.repositories.user import UserRepository
 # Настройка шифрования паролей
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+
 class AuthService:
     def __init__(self, user_repository: UserRepository):
         self.user_repository = user_repository

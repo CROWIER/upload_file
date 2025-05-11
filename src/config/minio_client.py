@@ -1,6 +1,7 @@
 from minio import Minio
 from src.config.settings import settings
 
+
 def create_minio_client() -> Minio:
     client = Minio(
         settings.MINIO_ENDPOINT,
@@ -9,6 +10,7 @@ def create_minio_client() -> Minio:
         secure=settings.MINIO_SECURE,
     )
     return client
+
 
 def init_minio_bucket(client: Minio) -> None:
     bucket = settings.MINIO_BUCKET_NAME
